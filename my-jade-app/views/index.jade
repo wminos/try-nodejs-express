@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1(style="color: red")= title
+    p Welcome to #{title}!
+    div This is #{note}!
+
+    br
+
+    div
+        table(class='mytable')
+            thead
+                tr
+                    th name
+                    th age
+            tbody
+                each entity in entities
+                    tr
+                        td= entity.name
+                        td= entity.age
